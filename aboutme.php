@@ -7,26 +7,25 @@ include('functions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>About me portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-<!-- Header -->
+    <!-- header -->
     <?php
      getHeader()
     ?>
 
-     <!-- main page function -->
-
-     <?php
-    getPortfolioPage()
+    <!-- about me -->
+    <?php
+     echo getAboutMe();
     ?>
-    
+
+
+
     <!-- footer -->
     <?php
-      getFooter() 
-    
+    getFooter()
     ?>
 </body>
 </html>
