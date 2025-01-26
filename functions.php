@@ -5,10 +5,20 @@ function getHeader() {
     <header>
         <div class="header">
             <div class="nav">
-                <a href="index.php">Home</a>
-                <a href="aboutme.php">About Me</a>
-                <a href="projects.php">Projects</a>
-                <a href="#" id="contact-link">Contact me</a>
+            
+                <div class="burger-menu" id="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            
+                <nav id="nav-links">
+                    <a href="index.php">Home</a>
+                    <a href="aboutme.php">About Me</a>
+                    <a href="projects.php">Projects</a>
+                    <a href="#" id="contact-link">Contact me</a>
+                </nav>
+                   
             </div>
         </div>
     </header>
@@ -100,5 +110,59 @@ function getPortfolioPage() {
         </div>
     </div>
     ';
+}
+?>
+
+
+<!-- projects function -->
+
+<?php
+function getProjects($projects) {
+    echo '<div class="projects">
+        <div class="work-projects">
+            <p>My projects</p>
+        </div>
+    </div>
+    <div class="work">
+        <div class="myprojects">';
+    
+    foreach ($projects as $project) {
+        echo '<div class="gitwork">
+                <img src="' . htmlspecialchars($project['image']) . '" alt="">
+                <div class="worktext">
+                    <a href="' . htmlspecialchars($project['link']) . '">' . htmlspecialchars($project['title']) . '</a>
+                    <h1>' . htmlspecialchars($project['description']) . '</h1>
+                </div>
+            </div>';
+    }
+    
+    echo '</div>
+    </div>';
+}
+?>
+
+<!-- about me function -->
+<?php
+function getAboutMe() {
+    return '
+    <section id="about-me" class="about-me">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>
+                Hello! My name is <strong>George Meskhia</strong>, and I’m a passionate web developer with expertise in 
+                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>, 
+                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>, 
+                <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a>, and 
+                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>. 
+                I’m committed to crafting user-friendly, modern, and functional web applications.
+            </p>
+            <p>
+                I enjoy combining clean design with efficient code to deliver seamless user experiences. Currently, I’m expanding my skillset to include new technologies and frameworks to stay ahead in this fast-paced industry.
+            </p>
+            <p>
+                When I’m not coding, you’ll often find me exploring the latest tech trends, learning new tools, or collaborating on exciting projects. I’m always eager to connect with like-minded individuals and take on challenging opportunities.
+            </p>
+        </div>
+    </section>';
 }
 ?>
