@@ -137,3 +137,276 @@ footer {
     font-size: 13px;
     margin: 0; 
 }
+
+/* footer end */
+
+/* Main */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+.main{
+    width: 1140px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    font-family: 'Heebo';
+    text-align: left; 
+    color: #21243D;
+}
+
+.main-text p {
+    font-weight: bold;
+    font-size: 44px;
+    margin: 0; 
+}
+
+.main-text h1 {
+    font-weight: lighter;
+    font-size: 16px;
+    margin: 10px 0; 
+}
+
+.button {
+    margin-top: 20px; 
+}
+
+.button a {
+    text-decoration: none; 
+    color: #fff; 
+    background-color: #21243D; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.button a:hover {
+    transform: scale(1.1); 
+    background-color: #0d33a2; 
+}
+
+
+.main img{
+    border-radius: 120px;
+}
+/* main end */
+
+/* mywork */
+
+.work {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px; 
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.gitwork {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+
+.gitwork img {
+    width: 250px; 
+    height: 160px; 
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.gitwork a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #21243D; 
+    font-size: 25px; 
+    font-family: 'Heebo'; 
+    margin-bottom: 10px; 
+}
+
+.gitwork a:hover {
+    color: #555; 
+}
+
+.gitwork h1 {
+    font-size: 15px; 
+    color: #555;
+    font-weight: 600; 
+    line-height: 1.3; 
+    margin-top: -5px; 
+    max-width: 400px; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+}
+
+
+.worktext{
+    margin-left: 15px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* burger menu when */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+/* Hide nav items on mobile */
+#nav-links {
+    display: flex;
+    gap: 45px;
+}
+
+
+/* responsive */
+
+
+@media (max-width: 767px) {
+    /* Adjusting layout for mobile screens */
+    .header, .footer, .main, .work {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main {
+        max-width: 700px; /* Ensure max width is 700px */
+        margin: 0 auto; /* Center content */
+    }
+
+    .main-text p {
+        font-size: 30px;
+    }
+
+    .main-text h1 {
+        font-size: 12px;
+    }
+
+    /* Stack nav items vertically on mobile */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .gitwork {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gitwork img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .main img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .footer-icon {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-icon a {
+        margin-bottom: 10px;
+    }
+
+    .work {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .work .gitwork {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* For tablets and small screens between 768px and 1024px */
+    .main {
+        width: 90%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .gitwork img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .nav {
+        gap: 30px;
+    }
+
+    .footer-icon {
+        gap: 20px;
+    }
+}
+
+/* Mobile Menu */
+@media (max-width: 767px) {
+    /* Hide navigation by default on mobile */
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+    }
+
+    /* Show burger menu */
+    .burger-menu {
+        display: flex;
+    }
+
+    /* Show nav items when burger is clicked */
+    .burger-menu.active + #nav-links {
+        display: flex;
+    }
+}

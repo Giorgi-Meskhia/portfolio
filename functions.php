@@ -55,3 +55,50 @@ function getFooter() {
     </footer>';
 }
 ?>
+
+<!-- main page function -->
+<?php
+function getPortfolioPage() {
+    echo '
+    <main>
+        <div class="main">
+            <div class="main-text">
+                <p>
+                    Hi, I am George,
+                    Future Web Developer
+                </p>
+                <h1>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </h1>
+                <div class="button">
+                    <a href="https://drive.google.com/uc?export=download&id=1ChpjYV_8aKshgn4UF_GYCMHmMUvyIWvP" download="George_Meskhia_Portfolio.pdf">Download Resume</a>
+                </div>
+            </div>
+            <img src="fotoebi/img.1.png" alt="">
+        </div>
+    </main>
+    <div class="work">
+        <div class="mywork">
+            <div class="gitwork">
+                <img src="fotoebi/git.png" alt="">
+                <div class="worktext">
+                    <a href="https://github.com/Monkas111/Lux-ventus--">My latest group work on Github</a>
+                    <h1>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </h1>
+                </div>
+            </div>
+            <div class="gitwork">
+                <img src="fotoebi/git.png" alt="">
+                <div class="worktext">
+                    <a href="https://giorgi-meskhia.github.io/Skilwill-Blog/">My latest work on Github</a>
+                    <h1>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    ';
+}
+?>

@@ -20,3 +20,15 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+
+// Get the burger menu and nav links
+const burgerMenu = document.getElementById("burger-menu");
+const navLinks = document.getElementById("nav-links");
+
+// Toggle the burger menu when clicked
+burgerMenu.addEventListener("click", () => {
+    // Toggle the "active" class on the burger menu and nav links
+    burgerMenu.classList.toggle("active");
+    navLinks.classList.toggle("active");
+});

@@ -16,6 +16,12 @@ include('functions.php');
     <?php
      getHeader()
     ?>
+
+     <!-- main page function -->
+
+     <?php
+    getPortfolioPage()
+    ?>
     
     <!-- footer -->
     <?php
